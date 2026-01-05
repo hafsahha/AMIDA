@@ -1,9 +1,21 @@
 "use client"
 
-import { useRef, useMemo, useEffect } from "react"
+import { useRef, useMemo, useEffect, useState } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { MeshDistortMaterial, Float, Stars, Environment } from "@react-three/drei"
 import * as THREE from "three"
+
+// ClientOnly wrapper to prevent hydration mismatch
+function ClientOnly({ children }: { children: React.ReactNode }) {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) return null
+  return <>{children}</>
+}
 
 function LiquidFloor({ isDark }: { isDark: boolean }) {
   const meshRef = useRef<THREE.Mesh>(null)
@@ -196,25 +208,27 @@ function CameraController() {
 
 export function Scene({ isDark }: { isDark: boolean }) {
   return (
-    <div className="canvas-container">
-      <Canvas shadows camera={{ position: [0, 2, 10], fov: 45 }}>
-        <CameraController />
-        <color attach="background" args={[isDark ? "#020205" : "#fdfdfb"]} />
-        <fog attach="fog" args={[isDark ? "#020205" : "#fdfdfb", 5, 25]} />
+    <ClientOnly>
+      <div className="canvas-container">
+        <Canvas shadows camera={{ position: [0, 2, 10], fov: 45 }}>
+          <CameraController />
+          <color attach="background" args={[isDark ? "#020205" : "#fdfdfb"]} />
+          <fog attach="fog" args={[isDark ? "#020205" : "#fdfdfb", 5, 25]} />
 
-        <ambientLight intensity={isDark ? 0.2 : 0.8} />
-        <pointLight position={[10, 10, 10]} intensity={isDark ? 1 : 0.5} color={isDark ? "#4444ff" : "#ffffff"} />
-        <spotLight position={[-10, 10, 10]} angle={0.15} penumbra={1} intensity={isDark ? 2 : 1} castShadow />
+          <ambientLight intensity={isDark ? 0.2 : 0.8} />
+          <pointLight position={[10, 10, 10]} intensity={isDark ? 1 : 0.5} color={isDark ? "#4444ff" : "#ffffff"} />
+          <spotLight position={[-10, 10, 10]} angle={0.15} penumbra={1} intensity={isDark ? 2 : 1} castShadow />
 
-        <LiquidFloor isDark={isDark} />
-        <Particles isDark={isDark} />
+          <LiquidFloor isDark={isDark} />
+          <Particles isDark={isDark} />
 
-        <FloatingStones isDark={isDark} />
-        {!isDark && <FallingPetals />}
-        {isDark && <DigitalRain />}
+          <FloatingStones isDark={isDark} />
+          {!isDark && <FallingPetals />}
+          {isDark && <DigitalRain />}
 
-        <Environment preset={isDark ? "night" : "apartment"} />
-      </Canvas>
-    </div>
+          <Environment preset={isDark ? "night" : "apartment"} />
+        </Canvas>
+      </div>
+    </ClientOnly>
   )
 }

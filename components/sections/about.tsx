@@ -19,9 +19,10 @@ export function About() {
             {/* Liquid Blob Shape using CSS border-radius animation */}
             <div className="w-56 h-56 md:w-64 md:h-64 rounded-[40%_60%_70%_30%/60%_30%_70%_40%] overflow-hidden shadow-2xl border-4 border-primary/20 transition-all duration-700 group-hover:rounded-[50%_50%_50%_50%] group-hover:border-primary/40">
               <img
-                src="/placeholder.svg?height=300&width=300"
-                alt="Hafsah Hamidah"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                src="/assets/img/profile.jpeg"
+                alt="Profile"
+                className="w-full h-full object-cover grayscale-0 dark:grayscale transition-all duration-700"
+                draggable="false"
               />
             </div>
             {/* Floating decorative ring */}

@@ -2,15 +2,25 @@
 
 import { useEffect, useState, useRef } from "react"
 import { motion, useSpring } from "framer-motion"
+import { useTheme } from "next-themes"
 
 export function CustomCursor() {
+  const { theme } = useTheme()
+  const isDark = theme === "dark"
   const [isHovering, setIsHovering] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const [trail, setTrail] = useState<{ x: number; y: number; id: number }[]>([])
   const cursorX = useSpring(0, { stiffness: 500, damping: 28 })
   const cursorY = useSpring(0, { stiffness: 500, damping: 28 })
   const trailIdRef = useRef(0)
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX - 16)
       cursorY.set(e.clientY - 16)
@@ -43,40 +53,64 @@ export function CustomCursor() {
       window.removeEventListener("mouseover", handleMouseOver)
       clearInterval(interval)
     }
-  }, [cursorX, cursorY])
+  }, [isMounted, cursorX, cursorY])
+
+  if (!isMounted) return null
+
+  const trailColor = isDark ? "rgba(0, 255, 255, 0.6)" : "rgba(180, 83, 9, 0.4)"
+  const cursorColor = isDark ? "#00ffff" : "#b45309"
+  const glowFilter = isDark ? "drop-shadow(0 0 8px rgba(0, 255, 255, 0.6))" : "none"
 
   return (
     <>
-      {trail.map((pos, i) => (
+      {trail.map((pos) => (
         <motion.div
           key={pos.id}
           initial={{ scale: 1, opacity: 0.6 }}
           animate={{ scale: 0, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none z-[9998] hidden md:block"
+          className="fixed pointer-events-none z-[9998] hidden md:block w-4 h-4 rounded-full"
           style={{
             left: pos.x,
             top: pos.y,
-            backgroundColor: "var(--primary)",
+            backgroundColor: trailColor,
             filter: "blur(4px)",
-            mixBlendMode: "difference",
           }}
         />
       ))}
 
-      {/* Main cursor */}
+      {/* Main cursor - Solid ring/dot with theme-based colors */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-primary pointer-events-none z-[9999] hidden md:block"
+        className="fixed pointer-events-none z-[9999] hidden md:flex items-center justify-center"
         style={{
           x: cursorX,
           y: cursorY,
-          scale: isHovering ? 2 : 1,
-          backgroundColor: isHovering ? "var(--primary)" : "transparent",
-          opacity: isHovering ? 0.3 : 1,
-          mixBlendMode: isHovering ? "difference" : "normal",
+          width: 32,
+          height: 32,
+          left: -16,
+          top: -16,
         }}
-        transition={{ type: "spring", stiffness: 500, damping: 28, mass: 0.5 }}
-      />
+      >
+        {/* Outer ring */}
+        <div
+          className="absolute w-8 h-8 rounded-full border-2 transition-all duration-300"
+          style={{
+            borderColor: cursorColor,
+            opacity: isHovering ? 0.5 : 1,
+            filter: glowFilter,
+          }}
+        />
+        {/* Inner dot */}
+        <div
+          className="absolute w-2 h-2 rounded-full transition-all duration-300"
+          style={{
+            backgroundColor: cursorColor,
+            opacity: isHovering ? 0.8 : 0.5,
+            filter: glowFilter,
+            transform: isHovering ? "scale(1.5)" : "scale(1)",
+          }}
+        />
+      </motion.div>
     </>
   )
 }
