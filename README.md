@@ -4,7 +4,7 @@
   <br />
 
   <h1>AMIDA-MI (谧)</h1>
-  <h3>The Infinite Light — Interactive 3D Portfolio</h3>
+  <h3>Infinite Light Meets Tranquil Depth</h3>
 
   <blockquote>
     <em>
@@ -15,14 +15,14 @@
   
   <p>
     <strong>Stunning yet Tranquil.</strong> <br>
-    An immersive web experience bridging <strong>Advanced AI Engineering</strong> and <strong>Creative Technology</strong>.
+    An immersive web experience at the intersection of <strong>AI Engineering</strong>, <strong>Data Science</strong>, and <strong>Creative Technology</strong>.
   </p>
 
   <p>
     <a href="https://amida-mi.vercel.app"><strong>View Live Demo</strong></a> • 
     <a href="#-tech-stack"><strong>Tech Stack</strong></a> • 
     <a href="#-key-features"><strong>Features</strong></a> •
-    <a href="#-portfolio-highlights"><strong>Selected Works</strong></a>
+    <a href="#-portfolio-highlights"><strong>Portfolio Highlights</strong></a>
   </p>
 </div>
 
@@ -100,7 +100,9 @@ Built for **Hafsah Hamidah**, a Software Engineer specializing in AI & Data, thi
 
 **Academic Excellence Meets Practical Innovation**
 
-Final-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.84/4.00) with a passion for turning complex theories into usable software. My journey spans from Full-Stack Web Development to pioneering research in Ethnopedagogy, with a current focus on Deep Learning, Computer Vision, NLP, and Data Engineering.
+Third-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.84/4.00). I specialize in building scalable web applications, engineering intelligent data pipelines, and developing real-time AI solutions. My journey spans Full-Stack Development, creative technology, and research in Ethnopedagogy and Smart Systems, with a current focus on Deep Learning, Computer Vision, NLP, and Data Engineering.
+
+This portfolio is built with Next.js, TailwindCSS, Zustand, GSAP (GreenSock Animation Platform), and React Three Fiber for immersive 3D experiences. The site leverages advanced animation, custom shaders, and interactive UI/UX to showcase both technical and creative skills. Every section is designed to be responsive, performant, and visually engaging, reflecting my passion for merging logic and creativity in software engineering.
 
 ## 🚀 Key Features
 
@@ -165,11 +167,11 @@ The design is centered around the concept of **"Liquid Logic"**. As a Computer S
 
 ## 👤 Author
 
-**Hafsah Hamidah** *Software Engineer (AI & Data Focus)*
+**Hafsah Hamidah** — Software Engineer (AI & Data Focus)
 
 * 🎓 Computer Science Student @ Universitas Pendidikan Indonesia (GPA 3.84)
-* 🏆 Alibaba Cloud Certified Developer
 * 🎖️ PKM National Grant Awardee
+* 🏅 Finalist & Winner in National Tech Competitions
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/hafsah-hamidah)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hafsahha)
