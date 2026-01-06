@@ -19,7 +19,7 @@
   </p>
 
   <p>
-    <a href="https://amida.vercel.app"><strong>View Live Demo</strong></a> • 
+    <a href="https://amida-mi.vercel.app"><strong>View Live Demo</strong></a> • 
     <a href="#-tech-stack"><strong>Tech Stack</strong></a> • 
     <a href="#-key-features"><strong>Features</strong></a> •
     <a href="#-portfolio-highlights"><strong>Selected Works</strong></a>
