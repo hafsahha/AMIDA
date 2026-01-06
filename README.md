@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="https://via.placeholder.com/1200x600?text=AMIDA+MI+Portfolio+Preview" alt="AMIDA-MI Portfolio Banner" width="100%">
+  <img src="Screenshot 2026-01-06 155551.png" alt="AMIDA-MI Portfolio Banner" width="100%">
   <br />
 
   <h1>AMIDA-MI (谧)</h1>
