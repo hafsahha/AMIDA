@@ -123,6 +123,24 @@
   body {
     @apply bg-background text-foreground transition-colors duration-500 overflow-x-hidden;
   }
+  
+  /* 1. FORCE HIDE SYSTEM CURSOR ON EVERYTHING */
+  * {
+    cursor: none !important;
+  }
+  
+  /* 2. Ensure the body and html take full height/width so cursor doesn't cut off */
+  html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
 
 /* Standardized Film Grain as a static pattern for performance */
@@ -154,12 +172,7 @@
   line-height: 1;
 }
 
-/* Fixed responsive cursor logic */
-@media (max-width: 768px) {
-  .cursor-none {
-    cursor: auto !important;
-  }
-}
+
 
 /* Using standard CSS for grain overlay opacity */
 .grain-overlay {
@@ -204,4 +217,27 @@
 
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
+}
+
+/* Organic Fluid Blob Cursor Animation */
+@keyframes blob-morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 70% 30% 66% 33% / 33% 66% 33% 66%;
+  }
+  75% {
+    border-radius: 100% 60% 52% 37% / 72% 60% 69% 78%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.animate-blob {
+  animation: blob-morph 8s ease-in-out infinite;
 }

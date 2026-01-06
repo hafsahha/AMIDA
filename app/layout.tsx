@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Cinzel } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "@/components/theme-provider"
+import { Cursor } from "@/components/ui/cursor"
 import "./globals.css"
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
@@ -26,9 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geist.variable} ${geistMono.variable} ${cinzel.variable} font-sans antialiased`}>
-        <div className="grain-overlay" />
-        {children}
-        <Analytics />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Cursor />
+          <div className="grain-overlay" />
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
