@@ -44,6 +44,7 @@ Phonetically, "Mi" resonates with "Me"—so **"Amida is Me."** This work is a di
 
 ---
 
+
 ## 📖 About The Project
 
 **AMIDA-MI** is a concept portfolio designed to showcase the intersection of rigorous Computer Science fundamentals and artistic digital expression.
@@ -52,6 +53,54 @@ Built for **Hafsah Hamidah**, a Software Engineer specializing in AI & Data, thi
 
 * **Day Mode (The Tranquil):** A porcelain-white, foggy Zen garden representing clarity and focus.
 * **Night Mode (The Stunning):** A bioluminescent, data-void ocean representing deep innovation and mystery.
+
+---
+
+## 🏆 Experience Overview
+
+**Professional Experience**
+
+- **Full-Stack Developer, Xtrahera Innovations** (Remote, Mar 2025 – Present)
+  - Delivered EdTech and E-Commerce solutions (AILearn, Maya Zaskia)
+  - Managed full software lifecycle: database architecture, API development, deployment
+  - Integrated AI chatbots and data scraping pipelines
+
+- **Frontend Developer (Consultation Project), PT Rekayasa Industri (via Xtrahera)** (Hybrid, Mar 2025 – May 2025)
+  - Developed "CoComm" approval dashboard for BUMN client
+  - Translated Figma prototypes to responsive Next.js/Tailwind interfaces
+  - Agile team collaboration, weekly sprints
+
+- **IT Staff & Web Developer (Community Service/P2M), Kemakom UPI** (Indragiri Village, Jun 2025 – Aug 2025)
+  - Digitized village administration, built Resident Data Security System
+  - Designed tourism profile website, managed deployment and user training
+
+- **Practicum Assistant - Database Management System, UPI** (On-site, Feb 2024 – Jun 2024)
+  - Led lab sessions for 70+ undergraduates, taught advanced SQL and database design
+  - Supervised final projects, evaluated code efficiency and query optimization
+
+**Leadership & Organizational Experience**
+
+- **Secretary, Competitive Programming Club (CPC) UPI** (Jan 2025 – Dec 2025)
+  - Managed member databases, coordinated contests and training
+  - Designed visual assets, managed internal communications
+
+- **Head of Opening & Closing Subdivision, Dinamik 20 (Dies Natalis KEMAKOM UPI)** (Jun 2025 – Dec 2025)
+  - Directed ceremonies, led team for stage flow and talent coordination
+  - Developed artistic direction for event theme
+
+- **Graphic Design Staff, Dinamik 19 (Dies Natalis KEMAKOM UPI)** (Jul 2024 – Dec 2024)
+  - Designed branding assets, social media feeds, and print materials
+
+- **General Treasurer, A-Storia Inauguration 2023** (Oct 2023 – Nov 2023)
+  - Managed event budget and financial reporting
+
+---
+
+## 📖 About Me
+
+**Academic Excellence Meets Practical Innovation**
+
+Final-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.84/4.00) with a passion for turning complex theories into usable software. My journey spans from Full-Stack Web Development to pioneering research in Ethnopedagogy, with a current focus on Deep Learning, Computer Vision, NLP, and Data Engineering.
 
 ## 🚀 Key Features
 
