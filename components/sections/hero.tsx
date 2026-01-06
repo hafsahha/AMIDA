@@ -34,8 +34,7 @@ export function Hero() {
         </h2>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-balance">
-          Alibaba Cloud Certified Developer and PKM National Grant Awardee. I build scalable web applications, engineer
-          intelligent data pipelines, and develop real-time AI solutions.
+          Drawing from diverse professional and research experience, I build scalable web applications, engineer intelligent data pipelines, and develop real-time AI solutions.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
