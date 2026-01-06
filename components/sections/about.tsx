@@ -13,54 +13,158 @@ export function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="mb-24 p-8 md:p-12 rounded-2xl backdrop-blur-md bg-white/5 dark:bg-black/5 border border-white/10 dark:border-white/10 max-w-3xl mx-auto"
+        className="mb-24 max-w-5xl mx-auto"
       >
-        <h2 className="text-center font-serif text-3xl md:text-4xl mb-8">
+        {/* Decorative Title with Gradient */}
+        <motion.h2 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center font-serif text-4xl md:text-5xl mb-16 bg-gradient-to-r from-amber-900 via-primary to-cyan-600 dark:from-amber-50 dark:via-cyan-400 dark:to-blue-500 bg-clip-text text-transparent"
+        >
           The Architecture of a Name
-        </h2>
-        
-        <div className="space-y-8 text-center md:text-left">
-          <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-4">
-            <div className="space-y-1">
-              <p className="font-serif text-2xl md:text-3xl font-bold">
-                AMIDA-MI
-              </p>
-              <p className="font-serif italic text-lg text-primary">
-                谧
-              </p>
-            </div>
-            <p className="text-muted-foreground italic max-w-sm">
-              A linguistic fusion of Identity and Logic.
-            </p>
-          </div>
+        </motion.h2>
 
-          <div className="space-y-6 border-l-2 border-primary/30 pl-6">
-            <div>
-              <h4 className="font-bold text-lg mb-2">1. The Dualism</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                <span className="font-semibold text-foreground">"Amida"</span> (<em>Infinite Light</em>) represents the chaos of innovation (Day).
-                <br />
-                <span className="font-semibold text-foreground">"Mi"</span> (<em>谧 - Tranquility</em>) represents the stability of deep logic (Night).
+        {/* Main Philosophy Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left: Visual Duality */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="space-y-8"
+          >
+            <div className="space-y-4">
+              <p className="text-sm uppercase tracking-[0.3em] text-primary font-bold">
+                Brand Philosophy
               </p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-2">2. The Origin</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                Derived from the core of my name, <span className="font-semibold text-foreground">H(amida)h</span>.
+              <div className="space-y-2">
+                <p className="font-serif text-4xl md:text-5xl font-bold text-amber-900 dark:text-amber-50">
+                  AMIDA-MI
+                </p>
+                <p className="font-serif text-5xl md:text-6xl text-primary dark:text-cyan-400 font-light">
+                  谧
+                </p>
+              </div>
+              <p className="text-lg text-muted-foreground italic leading-relaxed">
+                A linguistic fusion of Identity and Logic.
               </p>
             </div>
 
-            <div>
-              <h4 className="font-bold text-lg mb-2">3. The Identity</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                Phonetically, "Mi" resonates with "Me".
-                <br />
-                <span className="font-semibold text-foreground">"Amida is Me."</span> — A declaration that this work is a direct reflection of self.
-              </p>
+            {/* Yin-Yang Style Duality Cards */}
+            <div className="grid grid-cols-2 gap-4">
+              {/* Day - Amida Card */}
+              <motion.div
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="p-6 rounded-2xl bg-gradient-to-br from-yellow-50/40 to-orange-100/30 dark:from-amber-900/20 dark:to-orange-900/10 border border-amber-200/50 dark:border-amber-700/30 backdrop-blur-sm"
+              >
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-full bg-yellow-400/20 dark:bg-yellow-500/20 flex items-center justify-center">
+                    <span className="text-lg">☀️</span>
+                  </div>
+                  <p className="font-serif text-xl font-bold text-amber-900 dark:text-amber-100">
+                    Amida
+                  </p>
+                  <p className="text-sm text-amber-800 dark:text-amber-200">
+                    <span className="italic">Infinite Light</span><br/>
+                    Innovation & Chaos
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Night - Mi Card */}
+              <motion.div
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="p-6 rounded-2xl bg-gradient-to-br from-slate-900/20 to-blue-900/20 dark:from-slate-900/40 dark:to-cyan-900/20 border border-slate-400/30 dark:border-cyan-500/30 backdrop-blur-sm"
+              >
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-full bg-cyan-400/20 dark:bg-cyan-500/20 flex items-center justify-center">
+                    <span className="text-lg">🌙</span>
+                  </div>
+                  <p className="font-serif text-xl font-bold text-slate-700 dark:text-cyan-100">
+                    Mi (谧)
+                  </p>
+                  <p className="text-sm text-slate-600 dark:text-cyan-200">
+                    <span className="italic">Tranquility</span><br/>
+                    Logic & Stability
+                  </p>
+                </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
+
+          {/* Right: Philosophy Details with Timeline */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="space-y-6"
+          >
+            {/* Timeline-style Philosophy Points */}
+            {[
+              {
+                number: "01",
+                title: "The Dualism",
+                desc: '"Amida" (Infinite Light) is the chaos of innovation and possibility. "Mi" (谧) is the tranquility of deep logic and understanding. Together, they form a complete identity.',
+                color: "bg-amber-600 dark:bg-cyan-600",
+              },
+              {
+                number: "02",
+                title: "The Origin",
+                desc: "Derived from the core of my name: H(amida)h. A linguistic play that weaves identity with philosophical meaning, making the brand deeply personal.",
+                color: "bg-amber-600 dark:bg-cyan-600",
+              },
+              {
+                number: "03",
+                title: "The Identity",
+                desc: '"Amida is Me." Phonetically, "Mi" resonates with "Me"—a declaration that this entire work is a direct, authentic reflection of my values and technical vision.',
+                color: "bg-amber-600 dark:bg-cyan-600",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 + idx * 0.1 }}
+                className="flex gap-6 group"
+              >
+                {/* Number Accent */}
+                <div className={`flex-shrink-0 w-16 h-16 rounded-full ${item.color} flex items-center justify-center font-serif font-bold text-white text-xl shadow-lg group-hover:shadow-xl transition-shadow`}>
+                  {item.number}
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pt-2 space-y-2">
+                  <h3 className="font-serif text-xl font-bold text-foreground">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                    {item.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
+
+        {/* Closing Statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16 p-8 md:p-10 rounded-2xl bg-gradient-to-r from-primary/5 to-cyan-500/5 dark:from-cyan-950/30 dark:to-blue-950/30 border border-primary/20 dark:border-cyan-500/20 backdrop-blur-sm text-center"
+        >
+          <p className="font-serif text-2xl md:text-3xl font-bold text-foreground leading-relaxed">
+            "Where the <span className="text-primary dark:text-cyan-400">Infinite Light</span> of innovation meets the <span className="text-primary dark:text-cyan-400">Tranquil Depth</span> of logic."
+          </p>
+        </motion.div>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
@@ -101,7 +205,7 @@ export function About() {
             Academic Excellence Meets Practical Innovation
           </h3>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            I am a final-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.84/4.00) with a passion for turning complex theories into usable software. My journey spans from Full-Stack Web Development to pioneering research in Ethnopedagogy.
+            I am a third-year Computer Science student at Universitas Pendidikan Indonesia with a proven track record of academic excellence. <span className="font-semibold text-foreground">Cumulative GPA: 3.84 / 4.00</span> (Semesters 1-4), with a <span className="font-semibold text-foreground">Perfect 4.00 GPA in Semester 4</span> focused on Software Engineering & Object-Oriented Design. Currently finalizing Semester 5 in the Advanced AI & Data Engineering specialization track (Deep Learning, NLP, Computer Vison, Smart System, NoSQL, Management Data). I am passionate about turning complex theories into usable software, bridging academic rigor with practical innovation.
           </p>
 
           <div className="flex items-center gap-4 pt-4">
@@ -142,18 +246,20 @@ export function About() {
             <CardContent className="space-y-4 relative z-10">
               <p className="text-lg md:text-xl font-medium">Specialization: Advanced AI & Data Engineering</p>
               <p className="text-sm md:text-base text-muted-foreground">
-                Currently finalizing an intensive academic track focused on Deep Learning, Computer Vision, and Natural Language Processing (NLP). Simultaneously, deepening expertise in Non-Relational Databases (NoSQL) and E-Business strategies to build smarter, data-driven applications.
+                Currently in Semester 5, finalizing an intensive academic track focused on Deep Learning, Computer Vision, and Natural Language Processing (NLP). Deepening expertise in Non-Relational Databases (NoSQL) and E-Business strategies to build smarter, data-driven applications.
               </p>
-              <div className="pt-4 grid grid-cols-2 gap-4">
+              <div className="pt-4 grid grid-cols-3 gap-3">
                 <div className="p-3 md:p-4 rounded-xl bg-primary/5 border border-primary/10">
-                  <p className="text-xl md:text-2xl font-bold text-primary">3.84</p>
-                  <p className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">GPA</p>
+                  <p className="text-lg md:text-xl font-bold text-primary">3.84</p>
+                  <p className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">IPK (S1-S4)</p>
                 </div>
                 <div className="p-3 md:p-4 rounded-xl bg-primary/5 border border-primary/10">
-                  <p className="text-xl md:text-2xl font-bold text-primary">23</p>
-                  <p className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">
-                    Credits Focus
-                  </p>
+                  <p className="text-lg md:text-xl font-bold text-primary">4.0</p>
+                  <p className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">Sem 4 Peak</p>
+                </div>
+                <div className="p-3 md:p-4 rounded-xl bg-primary/5 border border-primary/10">
+                  <p className="text-lg md:text-xl font-bold text-primary">Sem 5</p>
+                  <p className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">Current</p>
                 </div>
               </div>
             </CardContent>

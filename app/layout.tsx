@@ -9,7 +9,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-serif", weight: ["400", "700"] })
 
 export const metadata: Metadata = {
-  title: "AMIDA | Hafsah Hamidah Portfolio",
+  title: "AMIDA 谧 | Hafsah Hamidah Portfolio",
   description: "Software Engineer bridging AI, Data, and Creative Tech.",
   generator: "v0.app",
   icons: {

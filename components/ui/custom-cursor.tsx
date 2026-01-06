@@ -22,8 +22,8 @@ export function CustomCursor() {
     if (!isMounted) return
 
     const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 16)
-      cursorY.set(e.clientY - 16)
+      cursorX.set(e.clientX)
+      cursorY.set(e.clientY)
 
       trailIdRef.current += 1
       setTrail((prev) => [...prev, { x: e.clientX - 8, y: e.clientY - 8, id: trailIdRef.current }])
@@ -57,9 +57,10 @@ export function CustomCursor() {
 
   if (!isMounted) return null
 
-  const trailColor = isDark ? "rgba(0, 255, 255, 0.6)" : "rgba(180, 83, 9, 0.4)"
-  const cursorColor = isDark ? "#00ffff" : "#b45309"
-  const glowFilter = isDark ? "drop-shadow(0 0 8px rgba(0, 255, 255, 0.6))" : "none"
+  // Day: Amber/Brown | Night: Teal/Tosca
+  const trailColor = isDark ? "rgba(20, 184, 166, 0.5)" : "rgba(180, 83, 9, 0.4)"
+  const cursorColor = isDark ? "#14b8a6" : "#92400e"
+  const glowFilter = isDark ? "drop-shadow(0 0 12px rgba(20, 184, 166, 0.8))" : "none"
 
   return (
     <>
@@ -81,35 +82,39 @@ export function CustomCursor() {
 
       {/* Main cursor - Solid ring/dot with theme-based colors */}
       <motion.div
-        className="fixed pointer-events-none z-[9999] hidden md:flex items-center justify-center"
+        className="fixed pointer-events-none z-[9999] hidden md:block"
         style={{
           x: cursorX,
           y: cursorY,
+          top: 0,
+          left: 0,
           width: 32,
           height: 32,
-          left: -16,
-          top: -16,
+          translateX: "-50%",
+          translateY: "-50%",
         }}
       >
-        {/* Outer ring */}
-        <div
-          className="absolute w-8 h-8 rounded-full border-2 transition-all duration-300"
-          style={{
-            borderColor: cursorColor,
-            opacity: isHovering ? 0.5 : 1,
-            filter: glowFilter,
-          }}
-        />
-        {/* Inner dot */}
-        <div
-          className="absolute w-2 h-2 rounded-full transition-all duration-300"
-          style={{
-            backgroundColor: cursorColor,
-            opacity: isHovering ? 0.8 : 0.5,
-            filter: glowFilter,
-            transform: isHovering ? "scale(1.5)" : "scale(1)",
-          }}
-        />
+        <div className="relative w-full h-full flex items-center justify-center">
+          {/* Outer ring */}
+          <div
+            className="absolute w-8 h-8 rounded-full border-2 transition-all duration-300"
+            style={{
+              borderColor: cursorColor,
+              opacity: isHovering ? 0.5 : 1,
+              filter: glowFilter,
+            }}
+          />
+          {/* Inner dot */}
+          <div
+            className="absolute w-2 h-2 rounded-full transition-all duration-300"
+            style={{
+              backgroundColor: cursorColor,
+              opacity: isHovering ? 0.8 : 0.5,
+              filter: glowFilter,
+              transform: isHovering ? "scale(1.5)" : "scale(1)",
+            }}
+          />
+        </div>
       </motion.div>
     </>
   )
