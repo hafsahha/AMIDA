@@ -45,9 +45,7 @@ export function About() {
             Academic Excellence Meets Practical Innovation
           </h3>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            I am a final-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.84/4.00) with a
-            passion for turning complex theories into usable software. My approach blends rigorous academic research
-            with high-performance engineering.
+            I am a final-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.84/4.00) with a passion for turning complex theories into usable software. My journey spans from Full-Stack Web Development to pioneering research in Ethnopedagogy.
           </p>
 
           <div className="flex items-center gap-4 pt-4">
@@ -88,8 +86,7 @@ export function About() {
             <CardContent className="space-y-4 relative z-10">
               <p className="text-lg md:text-xl font-medium">Specialization: Advanced AI & Data Engineering</p>
               <p className="text-sm md:text-base text-muted-foreground">
-                Currently finalizing an intensive academic track (23 SKS) focused on Deep Learning, CV, NLP, and NoSQL
-                strategies to build smarter, data-driven applications.
+                Currently finalizing an intensive academic track focused on Deep Learning, Computer Vision, and Natural Language Processing (NLP). Simultaneously, deepening expertise in Non-Relational Databases (NoSQL) and E-Business strategies to build smarter, data-driven applications.
               </p>
               <div className="pt-4 grid grid-cols-2 gap-4">
                 <div className="p-3 md:p-4 rounded-xl bg-primary/5 border border-primary/10">

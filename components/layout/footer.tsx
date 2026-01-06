@@ -13,25 +13,29 @@ export function Footer() {
             Ready to engineer <br /> the <span className="text-primary italic font-normal">future?</span>
           </h3>
           <p className="text-base md:text-xl text-muted-foreground max-w-md">
-            Currently looking for new opportunities and collaborations in AI, Data, and Web Engineering.
+            Let's collaborate on cutting-edge AI, data engineering, and innovative tech solutions.
           </p>
           <div className="flex flex-wrap gap-4 md:gap-6">
             <a
-              href="#"
+              href="https://github.com/hafsahha"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors"
             >
               GitHub{" "}
               <ArrowUpRight className="size-3 md:size-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
             <a
-              href="#"
+              href="https://linkedin.com/in/hafsah-hamidah/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors"
             >
               LinkedIn{" "}
               <ArrowUpRight className="size-3 md:size-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
             <a
-              href="mailto:contact@amida.dev"
+              href="mailto:hafsahhamidah25@upi.edu"
               className="group flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors"
             >
               Email{" "}
@@ -53,9 +57,13 @@ export function Footer() {
             Let's collaborate.
           </p>
           <MagneticButton strength={0.5}>
-            <button className="h-12 md:h-14 px-8 md:px-10 rounded-full bg-primary text-primary-foreground font-bold uppercase tracking-widest text-xs transition-transform hover:scale-105 shadow-2xl">
-              Send a message
-            </button>
+            <a
+              href="mailto:hafsahhamidah25@upi.edu"
+              className="h-12 md:h-14 px-8 md:px-10 rounded-full bg-primary text-primary-foreground font-bold uppercase tracking-widest text-xs transition-transform hover:scale-105 shadow-2xl flex items-center justify-center inline-flex"
+              style={{ lineHeight: 'normal', alignItems: 'center', display: 'inline-flex' }}
+            >
+              <span className="w-full text-center flex items-center justify-center">Send a message</span>
+            </a>
           </MagneticButton>
         </motion.div>
       </div>
