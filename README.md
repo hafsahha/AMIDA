@@ -1,28 +1,52 @@
 <div align="center">
   <br />
-  <img src="https://via.placeholder.com/1200x600?text=AMIDA+Portfolio+Preview" alt="AMIDA Portfolio Banner" width="100%">
+  <img src="https://via.placeholder.com/1200x600?text=AMIDA+MI+Portfolio+Preview" alt="AMIDA-MI Portfolio Banner" width="100%">
   <br />
 
-  <h1>AMIDA (谧)</h1>
+  <h1>AMIDA-MI (谧)</h1>
   <h3>The Infinite Light — Interactive 3D Portfolio</h3>
 
+  <blockquote>
+    <em>
+      "Where the <strong>Infinite Light</strong> of innovation meets the <strong>Tranquil Depth</strong> of logic.<br>
+      A play on identity: Derived from <strong>H(amida)h</strong> — pronounced <strong>'Amida is Me'</strong>."
+    </em>
+  </blockquote>
+  
   <p>
     <strong>Stunning yet Tranquil.</strong> <br>
     An immersive web experience bridging <strong>Advanced AI Engineering</strong> and <strong>Creative Technology</strong>.
   </p>
 
   <p>
-    <a href="https://amida-portfolio.vercel.app"><strong>View Live Demo</strong></a> • 
+    <a href="https://amida.vercel.app"><strong>View Live Demo</strong></a> • 
     <a href="#-tech-stack"><strong>Tech Stack</strong></a> • 
-    <a href="#-key-features"><strong>Features</strong></a>
+    <a href="#-key-features"><strong>Features</strong></a> •
+    <a href="#-portfolio-highlights"><strong>Selected Works</strong></a>
   </p>
 </div>
 
 <hr />
 
+## 📖 The Philosophy: AMIDA-MI (谧)
+
+**AMIDA-MI** is more than a name—it's a declaration of identity and design philosophy.
+
+### The Dualism
+- **"Amida"** (*Infinite Light*) represents the chaos of innovation, endless possibilities, and the boundless nature of technology. It embodies the **Day Mode** aesthetic—clarity, focus, and structured brilliance.
+- **"Mi"** (*谧* - Tranquility) represents the stability of deep logic, the calmness of understanding, and the organized nature of algorithms. It embodies the **Night Mode** aesthetic—mystery, depth, and bioluminescent wonder.
+
+### The Origin
+The name is derived from the core of my identity: **H(amida)h** (Hafsah Hamidah). It's a linguistic play that weaves my name with philosophical meaning.
+
+### The Declaration
+Phonetically, "Mi" resonates with "Me"—so **"Amida is Me."** This work is a direct reflection of my values, ambitions, and technical journey.
+
+---
+
 ## 📖 About The Project
 
-**AMIDA** (derived from *Amitābha* meaning "Infinite Light") is a concept portfolio designed to showcase the intersection of rigorous Computer Science fundamentals and artistic digital expression.
+**AMIDA-MI** is a concept portfolio designed to showcase the intersection of rigorous Computer Science fundamentals and artistic digital expression.
 
 Built for **Hafsah Hamidah**, a Software Engineer specializing in AI & Data, this platform moves beyond static resume templates. It utilizes **React Three Fiber** to create a living, breathing 3D environment that shifts between two distinct states:
 
