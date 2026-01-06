@@ -57,25 +57,27 @@ export function CustomCursor() {
 
   if (!isMounted) return null
 
-  // Day: Amber/Brown | Night: Teal/Tosca
-  const trailColor = isDark ? "rgba(20, 184, 166, 0.5)" : "rgba(180, 83, 9, 0.4)"
-  const cursorColor = isDark ? "#14b8a6" : "#92400e"
-  const glowFilter = isDark ? "drop-shadow(0 0 12px rgba(20, 184, 166, 0.8))" : "none"
+  // Day: Warm Amber (matching text-amber-900) | Night: Bright Cyan (matching text-cyan-400)
+  const trailColor = isDark ? "rgba(34, 211, 238, 0.4)" : "rgba(217, 119, 6, 0.5)"
+  const cursorColor = isDark ? "#22d3ee" : "#d97706"
+  const cursorRingColor = isDark ? "#06b6d4" : "#b45309"
+  const glowFilter = isDark ? "drop-shadow(0 0 8px rgba(34, 211, 238, 0.6))" : "drop-shadow(0 0 6px rgba(217, 119, 6, 0.4))"
 
   return (
     <>
+      {/* Trail particles */}
       {trail.map((pos) => (
         <motion.div
           key={pos.id}
-          initial={{ scale: 1, opacity: 0.6 }}
+          initial={{ scale: 1, opacity: 0.7 }}
           animate={{ scale: 0, opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="fixed pointer-events-none z-[9998] hidden md:block w-4 h-4 rounded-full"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="fixed pointer-events-none z-[9998] hidden md:block w-3 h-3 rounded-full"
           style={{
             left: pos.x,
             top: pos.y,
             backgroundColor: trailColor,
-            filter: "blur(4px)",
+            filter: "blur(3px)",
           }}
         />
       ))}
@@ -86,32 +88,29 @@ export function CustomCursor() {
         style={{
           x: cursorX,
           y: cursorY,
-          top: 0,
           left: 0,
-          width: 32,
-          height: 32,
-          translateX: "-50%",
-          translateY: "-50%",
+          top: 0,
         }}
       >
-        <div className="relative w-full h-full flex items-center justify-center">
+        <div className="relative -translate-x-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center">
           {/* Outer ring */}
           <div
-            className="absolute w-8 h-8 rounded-full border-2 transition-all duration-300"
+            className="absolute w-7 h-7 rounded-full border-2 transition-all duration-200 ease-out"
             style={{
-              borderColor: cursorColor,
-              opacity: isHovering ? 0.5 : 1,
+              borderColor: cursorRingColor,
+              opacity: isHovering ? 0.6 : 0.9,
+              transform: isHovering ? "scale(1.4)" : "scale(1)",
               filter: glowFilter,
             }}
           />
           {/* Inner dot */}
           <div
-            className="absolute w-2 h-2 rounded-full transition-all duration-300"
+            className="absolute w-2 h-2 rounded-full transition-all duration-200 ease-out"
             style={{
               backgroundColor: cursorColor,
-              opacity: isHovering ? 0.8 : 0.5,
+              opacity: isHovering ? 1 : 0.7,
+              transform: isHovering ? "scale(1.8)" : "scale(1)",
               filter: glowFilter,
-              transform: isHovering ? "scale(1.5)" : "scale(1)",
             }}
           />
         </div>
