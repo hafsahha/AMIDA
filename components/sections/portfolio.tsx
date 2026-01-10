@@ -79,7 +79,7 @@ const projectsData = [
     title: "AILearn Pancasila",
     category: "AI & Data",
     role: "Full Stack Engineer",
-    displayTech: ["Next.js", "OpenAI API", "MySQL"],
+    displayTech: ["Laravel", "Gemini API", "MySQL"],
     image: "/assets/work/6.png",
     context: "Live commercial project via Xtrahera Innovations - AI-powered civic education platform",
     problem: "Providing instant, context-aware answers to students' questions about national values (Pancasila) without human tutors.",
@@ -286,7 +286,7 @@ function ProjectCard({
       className="group relative cursor-pointer h-full"
       onClick={onClick}
     >
-      <div className="h-full overflow-hidden rounded-2xl bg-muted glass-panel border-none hover:shadow-xl transition-shadow duration-300">
+      <div className="h-full overflow-hidden rounded-2xl bg-muted glass-panel backdrop-blur-none md:backdrop-blur-md border-none hover:shadow-xl transition-shadow duration-300">
         {/* Image Container with Aspect Ratio */}
         <div className="relative h-64 overflow-hidden bg-muted">
           <img
@@ -357,7 +357,7 @@ function ProjectDetailModal({
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-background border-white/10">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-background/80 backdrop-blur-none md:backdrop-blur-md border-white/10">
         {/* Hero Section */}
         <div className="relative h-80 -mx-6 -mt-6 overflow-hidden">
           <img
@@ -549,7 +549,7 @@ export function Portfolio() {
 
           {/* Filter Tabs */}
           <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-            <TabsList className="bg-foreground/[0.03] border border-white/10 backdrop-blur-md h-auto p-1.5 rounded-full w-full md:w-auto flex-wrap justify-start gap-1">
+            <TabsList className="bg-foreground/[0.03] border border-white/10 backdrop-blur-none md:backdrop-blur-md h-auto p-1.5 rounded-full w-full md:w-auto flex-wrap justify-start gap-1">
               {categories.map((cat) => (
                 <TabsTrigger
                   key={cat}

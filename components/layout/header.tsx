@@ -31,7 +31,7 @@ export function Header() {
 
         {/* Floating Glass Pill Navigation at Top Center */}
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-          <div className="glass-panel px-6 py-3 rounded-full border border-foreground/10 backdrop-blur-xl bg-background/30 shadow-2xl transition-all duration-300 hover:px-8 hover:shadow-[0_0_40px_rgba(0,0,0,0.2)]">
+          <div className="glass-panel px-6 py-3 rounded-full border border-foreground/10 backdrop-blur-none md:backdrop-blur-xl bg-background/30 shadow-2xl transition-all duration-300 hover:px-8 hover:shadow-[0_0_40px_rgba(0,0,0,0.2)]">
             <div className="flex items-center gap-6">
               {navLinks.map((link) => (
                 <a
@@ -86,7 +86,7 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="bottom" className="h-[60vh] rounded-t-3xl glass-panel border-t">
+            <SheetContent side="bottom" className="h-[60vh] rounded-t-3xl glass-panel border-t backdrop-blur-none md:backdrop-blur-xl">
               <nav className="flex flex-col items-center justify-center h-full gap-8">
                 {navLinks.map((link) => (
                   <a

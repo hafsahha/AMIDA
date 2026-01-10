@@ -39,18 +39,27 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           <MagneticButton strength={0.4}>
-            <Button size="lg" className="rounded-full px-8 gap-2 group shadow-xl transition-all hover:scale-105">
+            <Button 
+              size="lg" 
+              className="rounded-full px-8 gap-2 group shadow-xl transition-all hover:scale-105"
+              onClick={() => {
+                const element = document.getElementById('works')
+                element?.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
               View Selected Works <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </MagneticButton>
           <MagneticButton strength={0.4}>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full px-8 gap-2 glass-panel hover:bg-white/10 dark:hover:bg-black/10 bg-transparent"
-            >
-              Download Resume <Download className="h-4 w-4" />
-            </Button>
+            <a href="https://drive.google.com/drive/folders/1d5H87wm69o1cni_M121A7pS94w1DSvBA?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-full px-8 gap-2 glass-panel backdrop-blur-none md:backdrop-blur-md hover:bg-white/10 dark:hover:bg-black/10 bg-transparent"
+              >
+                Download Resume <Download className="h-4 w-4" />
+              </Button>
+            </a>
           </MagneticButton>
         </div>
       </motion.div>

@@ -33,18 +33,20 @@ function MainContent() {
   const isDark = theme === "dark"
 
   return (
-    <main className="relative min-h-screen cursor-none">
-      {/* Layer 0: Background */}
-      <Scene isDark={isDark} />
+    <>
+      {/* Fixed Canvas Container (100svh prevents address bar jank) */}
+      <div className="fixed top-0 left-0 w-full h-[100svh] -z-10 pointer-events-none overflow-hidden">
+        <Scene isDark={isDark} />
+      </div>
 
-      {/* Layer 1: Fixed Overlays */}
+      {/* Fixed Overlays */}
       <div className="watermark-character" aria-hidden="true">
         谧
       </div>
       <div className="film-grain" aria-hidden="true" />
 
-      {/* Layer 10: Scrollable Content */}
-      <div className="relative z-10 max-w-full overflow-x-hidden">
+      {/* Scrollable Content Layer */}
+      <main className="relative z-10 w-full min-h-screen cursor-none overflow-x-hidden">
         <Header />
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <Hero />
@@ -54,7 +56,7 @@ function MainContent() {
           <Awards />
         </div>
         <Footer />
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
