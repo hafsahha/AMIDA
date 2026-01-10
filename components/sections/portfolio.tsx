@@ -85,7 +85,7 @@ const projectsData = [
     problem: "Providing instant, context-aware answers to students' questions about national values (Pancasila) without human tutors.",
     solution: "Integrated a Generative AI model via API with specific system prompts to act as a Civic Tutor. Deployed the full-stack application to a live VPS environment.",
     features: ["System Prompt Engineering", "Live VPS Deployment", "Intent Recognition", "Session Management"],
-    fullTech: ["Next.js", "OpenAI API", "MySQL", "Tailwind CSS"],
+    fullTech: ["Laravel", "Gemini API", "MySQL", "Tailwind CSS"],
     liveWeb: "https://ailearn-pancasila.id",
   },
 
