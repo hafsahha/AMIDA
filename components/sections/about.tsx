@@ -198,7 +198,7 @@ export function About() {
             </p>
             <div className="flex items-center gap-4 pt-4">
               <div className="flex -space-x-4">
-                {["UPI", "ABC", "PKM"].map((label, i) => (
+                {["UPI", "AMLI", "PKM"].map((label, i) => (
                   <div
                     key={i}
                     className="h-10 w-10 md:h-12 md:w-12 rounded-full border-4 border-background bg-accent flex items-center justify-center font-serif font-bold text-xs"

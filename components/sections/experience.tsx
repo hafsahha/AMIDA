@@ -18,7 +18,7 @@ const professionalExperience = [
     company: "PT Rekayasa Industri (via Xtrahera)",
     location: "Hybrid",
     period: "Mar 2025 – May 2025",
-    desc: "Enterprise Solution: Developed \"CoComm,\" a digital approval dashboard to streamline corporate workflows for a major BUMN client. Tech Implementation: Translated Figma prototypes into pixel-perfect responsive interfaces using Next.js and Tailwind CSS. Agile Collaboration: Worked in a cross-functional team of 5, facilitating weekly sprints to meet strict industrial deliverables.",
+    desc: "Enterprise Solution: Developed \"CoComm,\" a digital approval dashboard to streamline corporate workflows for a major BUMN client. Tech Implementation: Translated Figma prototypes into pixel-perfect responsive interfaces using Laravel (PHP) and Tailwind CSS. Agile Collaboration: Worked in a cross-functional team of 5, facilitating weekly sprints to meet strict industrial deliverables.",
     icon: <Briefcase className="size-5" />,
   },
   {
