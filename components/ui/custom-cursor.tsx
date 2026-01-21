@@ -48,7 +48,7 @@ export function CustomCursor() {
           key={pos.id}
           initial={{ scale: 1, opacity: 0.8 }}
           animate={{ scale: 0, opacity: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className="fixed pointer-events-none z-[9998] hidden md:block w-3 h-3 rounded-full"
           style={{
             left: pos.x,
