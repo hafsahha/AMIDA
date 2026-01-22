@@ -14,8 +14,8 @@ export function Cursor() {
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
-  // Spring config for smooth, fluid cursor movement
-  const springConfig = { damping: 25, stiffness: 200, mass: 0.3 }
+  // Spring config for snappier, more responsive cursor movement
+  const springConfig = { damping: 28, stiffness: 500, mass: 0.3 }
   const smoothX = useSpring(mouseX, springConfig)
   const smoothY = useSpring(mouseY, springConfig)
 
@@ -70,12 +70,12 @@ export function Cursor() {
   // Determine theme-based colors (CRITICAL: Uses resolvedTheme for dynamic updates)
   const isDayMode = !isDark
 
-  // Day Mode (Amber Liquid)
-  const dayBase = "bg-amber-600/30"
-  const dayBorder = "border-2 border-amber-800"
+  // Day Mode (Vibrant Brown with Orange - High visibility on light backgrounds)
+  const dayBase = "bg-gradient-to-br from-orange-500/20 to-amber-900/10"
+  const dayBorder = "border-2 border-orange-600/90"
   const dayFilter = "backdrop-blur-sm"
 
-  // Night Mode (Cyan Energy)
+  // Night Mode (Neon Teal Glow - Keep existing style)
   const nightBase = "bg-teal-400/30"
   const nightBorder = "border-2 border-teal-300"
   const nightGlow = "shadow-[0_0_20px_rgba(45,212,191,0.6)]"
@@ -91,7 +91,7 @@ export function Cursor() {
 
   return (
     <motion.div
-      className={`fixed top-0 left-0 pointer-events-none z-[99999] w-8 h-8 ${baseClass} ${borderClass} ${filterClass} ${glowClass} will-change-transform animate-blob`}
+      className={`fixed top-0 left-0 pointer-events-none z-[99999] w-8 h-8 ${baseClass} ${borderClass} ${filterClass} ${glowClass} will-change-transform animate-blob rounded-full`}
       style={{
         x: smoothX,
         y: smoothY,
@@ -99,7 +99,7 @@ export function Cursor() {
       }}
       animate={{
         scale: hoverScale,
-        opacity: isHovered ? 0.8 : 0.7,
+        opacity: 1,
       }}
       transition={{
         scale: {

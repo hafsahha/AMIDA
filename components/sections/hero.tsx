@@ -65,7 +65,7 @@ export function Hero() {
       </motion.div>
 
       {/* <CHANGE> Tech Ticker moved to absolute bottom of screen with fixed positioning */}
-      <div className="fixed bottom-0 left-0 right-0 py-8 border-y border-foreground/5 bg-foreground/[0.02] backdrop-blur-sm z-10">
+      <div className="fixed bottom-0 left-0 right-0 py-8 border-y border-foreground/5 bg-foreground/[0.02] z-10">
         <div className="flex whitespace-nowrap overflow-hidden">
           <motion.div
             animate={{ x: [0, -1000] }}

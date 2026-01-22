@@ -11,6 +11,7 @@ import { Experience } from "@/components/sections/experience"
 import { Awards } from "@/components/sections/awards"
 import { Footer } from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/ui/theme-provider"
+import { ChatWidget } from "@/components/ChatWidget"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -57,6 +58,9 @@ function MainContent() {
         </div>
         <Footer />
       </main>
+
+      {/* AI Chat Widget */}
+      <ChatWidget />
     </>
   )
 }

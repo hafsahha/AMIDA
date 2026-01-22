@@ -33,7 +33,7 @@ const professionalExperience = [
     role: "Practicum Assistant - Database Management System",
     company: "Universitas Pendidikan Indonesia",
     location: "On-site",
-    period: "Feb 2024 – Jun 2024",
+    period: "Feb 2025 – Jun 2025",
     desc: "Mentorship: Selected by faculty to lead lab sessions for 70+ undergraduates, teaching Database Design (ERD), Normalization, and Advanced SQL (Stored Procedures, Triggers). Project Supervision: Guided students in integrating MySQL databases with PHP/Web frontends for their final projects. Evaluation: Assessed code efficiency and query optimization, providing personalized feedback to ensure concept mastery.",
     icon: <Briefcase className="size-5" />,
   },
@@ -43,7 +43,7 @@ const leadershipExperience = [
   {
     role: "Secretary",
     company: "Competitive Programming Club (CPC) UPI",
-    period: "Jan 2025 – Dec 2025",
+    period: "Jan 2025 – Jan 2026",
     desc: "Operations Management: Managed member databases and administrative workflows for the university's algorithmic community. Event Coordination: Facilitated programming contests and weekly training sessions, ensuring a conducive learning environment. Communication: Designed visual assets and managed internal broadcasts to disseminate information effectively.",
     icon: <Users className="size-5" />,
   },

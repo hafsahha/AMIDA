@@ -286,7 +286,7 @@ function ProjectCard({
       className="group relative cursor-pointer h-full"
       onClick={onClick}
     >
-      <div className="h-full overflow-hidden rounded-2xl bg-muted glass-panel backdrop-blur-none md:backdrop-blur-md border-none hover:shadow-xl transition-shadow duration-300">
+      <div className="h-full overflow-hidden rounded-2xl border-none hover:shadow-xl transition-shadow duration-300 bg-[#fdfbf7]/95 dark:bg-[#050a0a]/95 md:bg-muted md:glass-panel md:backdrop-blur-md">
         {/* Image Container with Aspect Ratio */}
         <div className="relative h-64 overflow-hidden bg-muted">
           <img
