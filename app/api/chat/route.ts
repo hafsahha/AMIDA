@@ -342,7 +342,7 @@ export async function POST(req: Request) {
     // If no fallback match, try Gemini API with Vercel AI SDK
     try {
       const result = await streamText({
-        model: google('gemini-2.5-flash-lite'),
+        model: google('gemini-2.5-flash'),
         system: `${HAFSAH_DATA}\n\n${SYSTEM_PROMPT}`,
         messages: coreMessages,
         temperature: 0.7,
