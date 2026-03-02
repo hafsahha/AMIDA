@@ -1,9 +1,29 @@
 "use client"
 
+import { useState, useEffect } from "react"
+import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
 import { Sparkles } from "lucide-react"
 
 export function LoadingScreen() {
+  const { theme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Prevent flash on SSR - return neutral skeleton
+  if (!mounted) {
+    return (
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-background">
+        <div className="animate-pulse text-4xl font-serif text-foreground/20">谧</div>
+      </div>
+    )
+  }
+
+  const isDark = resolvedTheme === "dark"
+
   return (
     <motion.div
       initial={{ opacity: 1 }}
@@ -15,7 +35,11 @@ export function LoadingScreen() {
           ease: [0.43, 0.13, 0.23, 0.96] 
         } 
       }}
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950"
+      className={`fixed inset-0 z-[9999] flex items-center justify-center ${
+        isDark 
+          ? "bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950" 
+          : "bg-gradient-to-br from-amber-50 via-orange-50 to-cyan-50"
+      }`}
     >
       {/* Ambient Glow Effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -29,7 +53,9 @@ export function LoadingScreen() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px]"
+          className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] ${
+            isDark ? "bg-cyan-500/20" : "bg-cyan-400/30"
+          }`}
         />
         <motion.div
           animate={{
@@ -42,7 +68,9 @@ export function LoadingScreen() {
             ease: "easeInOut",
             delay: 1,
           }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-[120px]"
+          className={`absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-[120px] ${
+            isDark ? "bg-amber-500/20" : "bg-amber-400/40"
+          }`}
         />
       </div>
 
@@ -64,17 +92,33 @@ export function LoadingScreen() {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-amber-500/20 rounded-full blur-xl"
+            className={`absolute inset-0 rounded-full blur-xl ${
+              isDark 
+                ? "bg-gradient-to-r from-cyan-500/20 to-amber-500/20" 
+                : "bg-gradient-to-r from-cyan-400/30 to-amber-400/40"
+            }`}
           />
-          <div className="relative bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-md border border-white/10 rounded-3xl px-12 py-8 shadow-2xl">
-            <h1 className="text-6xl md:text-7xl font-serif font-bold bg-gradient-to-r from-cyan-200 via-amber-200 to-cyan-300 bg-clip-text text-transparent">
+          <div className={`relative backdrop-blur-md rounded-3xl px-12 py-8 shadow-2xl ${
+            isDark 
+              ? "bg-gradient-to-br from-slate-900/90 to-slate-800/90 border border-white/10" 
+              : "bg-gradient-to-br from-white/80 to-amber-50/80 border border-amber-900/10"
+          }`}>
+            <h1 className={`text-6xl md:text-7xl font-serif font-bold bg-clip-text text-transparent ${
+              isDark 
+                ? "bg-gradient-to-r from-cyan-200 via-amber-200 to-cyan-300" 
+                : "bg-gradient-to-r from-cyan-700 via-amber-600 to-cyan-800"
+            }`}>
               AMIDA
             </h1>
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mt-2"
+              className={`h-0.5 mt-2 ${
+                isDark 
+                  ? "bg-gradient-to-r from-transparent via-cyan-400 to-transparent" 
+                  : "bg-gradient-to-r from-transparent via-amber-600 to-transparent"
+              }`}
             />
           </div>
         </motion.div>
@@ -84,7 +128,9 @@ export function LoadingScreen() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex items-center gap-3 text-cyan-100/70"
+          className={`flex items-center gap-3 ${
+            isDark ? "text-cyan-100/70" : "text-amber-900/70"
+          }`}
         >
           <motion.div
             animate={{
@@ -96,7 +142,7 @@ export function LoadingScreen() {
               ease: "linear",
             }}
           >
-            <Sparkles size={20} className="text-cyan-400" />
+            <Sparkles size={20} className={isDark ? "text-cyan-400" : "text-amber-600"} />
           </motion.div>
           <span className="text-sm uppercase tracking-[0.3em] font-bold">
             Loading Context
@@ -127,7 +173,9 @@ export function LoadingScreen() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="text-8xl text-cyan-200/20 font-serif"
+          className={`text-8xl font-serif ${
+            isDark ? "text-cyan-200/20" : "text-amber-900/15"
+          }`}
           aria-hidden="true"
         >
           谧
@@ -136,10 +184,15 @@ export function LoadingScreen() {
 
       {/* Grid Pattern Overlay */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className={`absolute inset-0 ${
+          isDark ? "opacity-[0.03]" : "opacity-[0.05]"
+        }`}
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundImage: isDark 
+            ? `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+               linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)` 
+            : `linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+               linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)`,
           backgroundSize: '50px 50px',
         }}
       />
