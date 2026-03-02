@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
+import { AnimatePresence } from "framer-motion"
 import { Scene } from "@/components/scene/liquid-mirror"
 import { Header } from "@/components/layout/header"
 import { Hero } from "@/components/sections/hero"
@@ -12,19 +13,34 @@ import { Awards } from "@/components/sections/awards"
 import { Footer } from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/ui/theme-provider"
 import { ChatWidget } from "@/components/ChatWidget"
+import { LoadingScreen } from "@/components/LoadingScreen"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     setMounted(true)
+    
+    // Hide loading screen after 2 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
+
+    return () => clearTimeout(timer)
   }, [])
 
   if (!mounted) return null
 
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
-      <MainContent />
+      <AnimatePresence mode="wait">
+        {isLoading ? (
+          <LoadingScreen key="loading" />
+        ) : (
+          <MainContent key="main" />
+        )}
+      </AnimatePresence>
     </ThemeProvider>
   )
 }

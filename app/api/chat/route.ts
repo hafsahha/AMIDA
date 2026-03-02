@@ -1,7 +1,12 @@
-import { google } from '@ai-sdk/google'
+import { createHuggingFace } from '@ai-sdk/huggingface'
 import { streamText } from 'ai'
 
 export const runtime = 'edge'
+
+// Initialize Hugging Face provider
+const huggingface = createHuggingFace({
+  apiKey: process.env.HUGGING_FACE_API_KEY,
+})
 
 const HAFSAH_DATA = `
 **PROFILE:**
@@ -339,11 +344,11 @@ export async function POST(req: Request) {
       }
     }
 
-    // If no fallback match, try Gemini API with Vercel AI SDK
+    // If no fallback match, try Hugging Face API with Vercel AI SDK
     try {
       const result = await streamText({
-        model: google('gemini-2.5-flash'),
-        system: `${HAFSAH_DATA}\n\n${SYSTEM_PROMPT}`,
+        model: huggingface('mistralai/Mistral-7B-Instruct-v0.2'),
+        system: `You are Mimi 🎀, Hafsah's assistant. ${HAFSAH_DATA}\n\n${SYSTEM_PROMPT}`,
         messages: coreMessages,
         temperature: 0.7,
         maxTokens: 500,
@@ -351,8 +356,8 @@ export async function POST(req: Request) {
 
       return result.toDataStreamResponse()
     } catch (apiError: any) {
-      // If API fails (quota exceeded, 404, etc), return friendly fallback
-      console.error('Gemini API Error:', apiError)
+      // If API fails (quota exceeded, model error, etc), return friendly fallback
+      console.error('Hugging Face API Error:', apiError)
       return new Response(
         "I can answer many questions about Hafsah! Try asking about her age, skills, availability, GPA, projects (SIGMA-UMKM, Smart Batik Lens, etc), BUMN experience, or why she's trustworthy. 😊",
         { headers: { 'Content-Type': 'text/plain; charset=utf-8' } }
