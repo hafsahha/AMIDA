@@ -194,7 +194,7 @@ export function About() {
               Academic Excellence Meets Practical Innovation
             </h3>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              I am a third-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.84/4.00) with a passion for turning complex theories into usable software. My journey spans from Full-Stack Web Development to pioneering research in Ethnopedagogy.
+              I am a third-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.82/4.00) with a passion for turning complex theories into usable software. My journey spans from Full-Stack Web Development to pioneering research in Ethnopedagogy.
             </p>
             <div className="flex items-center gap-4 pt-4">
               <div className="flex -space-x-4">
@@ -218,7 +218,7 @@ export function About() {
         {/* Stats & Current Focus Side */}
         <div className="flex-1 flex flex-col items-center gap-6 min-w-[220px]">
           {/* <div className="p-4 rounded-2xl bg-primary/5 border border-primary/10 w-28 text-center">
-            <p className="text-2xl font-bold text-primary">3.84</p>
+            <p className="text-2xl font-bold text-primary">3.82</p>
             <p className="text-[10px] uppercase tracking-widest text-muted-foreground">GPA</p>
           </div> */}
           <div className="p-4 rounded-2xl bg-primary/5 border border-primary/10 w-full text-left">

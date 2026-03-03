@@ -74,13 +74,13 @@ Built for **Hafsah Hamidah**, a Software Engineer specializing in AI & Data, thi
   - Digitized village administration, built Resident Data Security System
   - Designed tourism profile website, managed deployment and user training
 
-- **Practicum Assistant - Database Management System, UPI** (On-site, Feb 2024 – Jun 2024)
+- **Practicum Assistant - Database Management System, UPI** (On-site, Feb 2025 – Jun 2025)
   - Led lab sessions for 70+ undergraduates, taught advanced SQL and database design
   - Supervised final projects, evaluated code efficiency and query optimization
 
 **Leadership & Organizational Experience**
 
-- **Secretary, Competitive Programming Club (CPC) UPI** (Jan 2025 – Dec 2025)
+- **Secretary, Competitive Programming Club (CPC) UPI** (Jan 2025 – Jan 2026)
   - Managed member databases, coordinated contests and training
   - Designed visual assets, managed internal communications
 
@@ -100,7 +100,7 @@ Built for **Hafsah Hamidah**, a Software Engineer specializing in AI & Data, thi
 
 **Academic Excellence Meets Practical Innovation**
 
-Third-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.84/4.00). I specialize in building scalable web applications, engineering intelligent data pipelines, and developing real-time AI solutions. My journey spans Full-Stack Development, creative technology, and research in Ethnopedagogy and Smart Systems, with a current focus on Deep Learning, Computer Vision, NLP, and Data Engineering.
+Third-year Computer Science student at Universitas Pendidikan Indonesia (GPA 3.82/4.00). I specialize in building scalable web applications, engineering intelligent data pipelines, and developing real-time AI solutions. My journey spans Full-Stack Development, creative technology, and research in Ethnopedagogy and Smart Systems, with a current focus on Deep Learning, Computer Vision, NLP, and Data Engineering.
 
 This portfolio is built with Next.js, TailwindCSS, Zustand, GSAP (GreenSock Animation Platform), and React Three Fiber for immersive 3D experiences. The site leverages advanced animation, custom shaders, and interactive UI/UX to showcase both technical and creative skills. Every section is designed to be responsive, performant, and visually engaging, reflecting my passion for merging logic and creativity in software engineering.
 
@@ -225,7 +225,7 @@ PHP + SQL with strict database normalization for facility schedule integrity.
 - Commercial solutions for EdTech & E-Commerce
 - Backend optimization, AI integration, data scraping
 
-**Practicum Assistant (Database Management)** | UPI (Feb 2024 – Jun 2024)
+**Practicum Assistant (Database Management)** | UPI (Feb 2025 – Jun 2025)
 - Mentored 70+ students in Schema Design, Normalization, Advanced SQL, Indexing
 
 **IT Staff (System Implementer)** | P2M Kemakom UPI (Jun–Aug 2025)
@@ -277,7 +277,7 @@ The design is centered around the concept of **"Liquid Logic"**. As a Computer S
 
 **Hafsah Hamidah** — Software Engineer (AI & Data Focus)
 
-* 🎓 Computer Science Student @ Universitas Pendidikan Indonesia (GPA 3.84)
+* 🎓 Computer Science Student @ Universitas Pendidikan Indonesia (GPA 3.82)
 * 🎖️ PKM National Grant Awardee
 * 🏅 Finalist & Winner in National Tech Competitions
 

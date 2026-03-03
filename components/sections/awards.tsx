@@ -19,12 +19,12 @@ const awards = [
   {
     title: "1st Consolation Winner - Porseni AMLI",
     org: "E-Sports Competition",
-    cert: "2024",
+    cert: "2025",
     icon: <Award className="text-primary" />,
   },
   {
-    title: "Top Performer - TechPreneurship Training",
-    org: "Innovation Hub",
+    title: "TechPreneurship Training",
+    org: "Student Executive Board Kemakom UPI",
     cert: "Leadership & Entrepreneurship",
     icon: <Award className="text-amber-500" />,
   },
