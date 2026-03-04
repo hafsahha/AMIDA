@@ -243,7 +243,7 @@ const projectsData = [
     role: "Game Artist & Designer",
     displayTech: ["Game Art", "2D Graphics", "Storytelling"],
     image: "/assets/work/16.png",
-    context: "COMPFEST 16 (Indie Game Ignite) - 2D adventure puzzle game finalist",
+    context: "COMPFEST 16 (Indie Game Ignite) - 2D adventure puzzle game",
     problem: "Creating an engaging narrative-driven indie game with original artistic vision.",
     solution: "Designed all original 2D characters and environments. Produced promotional trailer. Focused on atmosphere and emotional storytelling.",
     features: ["Original Character Design", "Environment Art", "Promotional Media", "Puzzle Mechanics"],

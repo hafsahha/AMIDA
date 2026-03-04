@@ -10,6 +10,7 @@ import { About } from "@/components/sections/about"
 import { Portfolio } from "@/components/sections/portfolio"
 import { Experience } from "@/components/sections/experience"
 import { Awards } from "@/components/sections/awards"
+import { CertificateSlider } from "@/components/sections/certificate-slider"
 import { Footer } from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/ui/theme-provider"
 import { ChatWidget } from "@/components/ChatWidget"
@@ -72,6 +73,7 @@ function MainContent() {
           <Experience />
           <Awards />
         </div>
+        <CertificateSlider />
         <Footer />
       </main>
 
