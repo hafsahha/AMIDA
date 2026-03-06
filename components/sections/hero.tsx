@@ -31,6 +31,8 @@ export function Hero() {
     "IoT",
     "Figma",
     "Flask",
+    "Dart",
+    "Git",
   ]
 
   return (
