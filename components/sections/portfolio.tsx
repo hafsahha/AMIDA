@@ -28,6 +28,22 @@ const projectsData = [
     github: "https://github.com/codewara/SIGMA-UMKM",
   },
   {
+    id: "amarta-erp",
+    title: "Amarta Mobile ERP",
+    category: "Web & Mobile",
+    role: "Mobile Frontend Developer",
+    featured: true,
+    displayTech: ["Flutter", "Laravel API", "GPS"],
+    image: "/assets/work/amarta.png",
+    context: "Live commercial enterprise application for field staff operational tracking via Xtrahera Innovations.",
+    problem: "Field workers needed a reliable mobile interface to log live attendance (location-based) and track physical assets without experiencing UI lag when syncing with the main server.",
+    solution: "Engineered a cross-platform Flutter mobile app consuming complex Laravel REST APIs. Integrated native Geolocation for precise attendance tracking and Camera APIs for asset barcode scanning.",
+    features: ["Real-time Geolocation (GPS)", "QR/Barcode Scanner Integration", "Asynchronous API Handling", "Smooth State Management"],
+    fullTech: ["Flutter", "Dart", "REST API", "Laravel (Backend)", "JSON Parsing"],
+    application: "https://play.google.com/store/apps/details?id=com.amarta.hris",
+    liveWeb: "https://mobile.amartaglobalservice.com/login",
+  },
+  {
     id: "smart-batik",
     title: "Smart Batik Lens",
     category: "AI & Data",
@@ -448,6 +464,16 @@ function ProjectDetailModal({
                 className="h-12 px-6 md:px-8 rounded-full bg-primary/80 text-primary-foreground font-bold uppercase tracking-widest text-xs transition-transform hover:scale-105 shadow-xl flex items-center justify-center gap-2"
               >
                 <Github size={16} /> Backend
+              </a>
+            )}
+            {project.application && (
+              <a
+                href={project.application}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-12 px-6 md:px-8 rounded-full bg-blue-600 text-white font-bold uppercase tracking-widest text-xs transition-transform hover:scale-105 shadow-xl flex items-center justify-center gap-2"
+              >
+                <ExternalLink size={16} /> Play Store
               </a>
             )}
             {project.liveWeb && (
