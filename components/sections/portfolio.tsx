@@ -54,7 +54,7 @@ const projectsData = [
     problem: "Manual hydroponic monitoring is labor-intensive. Need real-time sensor data (pH, TDS, Temperature) aggregation and automated control.",
     solution: "Built Golang backend to handle concurrent sensor streams using Goroutines. Implemented MQTT protocol for low-latency hardware-to-app communication. ESP32 sensors send data to broker.",
     features: ["Goroutine-based Concurrency", "MQTT Protocol Integration", "Real-time Sensor Aggregation", "Automated Actuator Control", "Mobile Dashboard"],
-    fullTech: ["Golang", "MQTT", "C++ (ESP32)", "PostgreSQL", "Flutter"],
+    fullTech: ["Golang", "MQTT", "C++ (ESP32)", "Flutter"],
     github: "https://github.com/hafsahha/pantanizz",
   },
   {

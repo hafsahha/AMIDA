@@ -72,7 +72,7 @@ const HAFSAH_DATA = `
 
 3. PantaniZz - Automated Hydroponic Farming IoT
    - Role: Backend & IoT Engineer
-   - Tech Stack: Golang, MQTT, C++ (ESP32), PostgreSQL, Flutter
+   - Tech Stack: Golang, MQTT, C++ (ESP32), Flutter
    - Context: End-to-end IoT ecosystem for automated hydroponic farming with real-time sensor data aggregation.
    - Problem: Manual hydroponic monitoring is labor-intensive. Need real-time sensor data (pH, TDS, Temperature) aggregation and automated control.
    - Solution: Built Golang backend to handle concurrent sensor streams using Goroutines. Implemented MQTT protocol for low-latency hardware-to-app communication. ESP32 sensors send data to broker.
