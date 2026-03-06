@@ -31,7 +31,7 @@ const projectsData = [
     id: "amarta-erp",
     title: "Amarta Mobile ERP",
     category: "Web & Mobile",
-    role: "Mobile Frontend Developer",
+    role: "Mobile Developer",
     featured: true,
     displayTech: ["Flutter", "Laravel API", "GPS"],
     image: "/assets/work/amarta.png",
